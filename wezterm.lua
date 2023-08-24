@@ -26,7 +26,7 @@ config.background = {
     source = {
       File = os.getenv('HOMEDRIVE') .. os.getenv('HOMEPATH') .. '/.config/wezterm/JulianJLogo_White.png'
     },
-    opacity = 0.01,
+    opacity = 0.1,
     height = 'Contain',
     width = 'Contain',
     repeat_x = 'NoRepeat',
@@ -90,6 +90,7 @@ wezterm.on('gui-startup', function()
     local windowWidth = wezterm.gui.screens().main.width / 2
     window:gui_window():set_inner_size(windowWidth,windowHeight)
     window:gui_window():set_position(windowWidth,31)
+    window:gui_window():focus()
 end)
 
 -- and finally, return the configuration to wezterm
