@@ -35,6 +35,7 @@ config.background = {
     horizontal_align = 'Center',
   }
 }
+config.default_domain = 'WSL:Ubuntu'
 config.use_dead_keys = false
 config.scrollback_lines = 5000
 config.adjust_window_size_when_changing_font_size = false
