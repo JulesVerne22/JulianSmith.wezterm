@@ -18,7 +18,7 @@ config.background = {
     source = {
       Color = '#000000'
     },
-    opacity = 0.90,
+    opacity = 0.80,
     width = '100%',
     height = '100%'
   },
@@ -26,7 +26,7 @@ config.background = {
     source = {
       File = os.getenv('HOMEDRIVE') .. os.getenv('HOMEPATH') .. '/.config/wezterm/JulianJLogo_White.png'
     },
-    opacity = 0.1,
+    opacity = 0.05,
     height = 'Contain',
     width = 'Contain',
     repeat_x = 'NoRepeat',
@@ -35,7 +35,7 @@ config.background = {
     horizontal_align = 'Center',
   }
 }
-config.default_domain = 'WSL:Ubuntu'
+
 config.use_dead_keys = false
 config.scrollback_lines = 5000
 config.adjust_window_size_when_changing_font_size = false
@@ -47,8 +47,8 @@ config.keys = {
     { key = 'k', mods = 'WIN|SHIFT', action = act.ActivatePaneDirection 'Up' },
     { key = 'Enter', mods = 'WIN|SHIFT', action = act.ActivateCopyMode },
     { key = 'R', mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
-    { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },
-    { key = '-', mods = 'CTRL', action = act.DecreaseFontSize },
+    { key = '+', mods = 'CTRL|SHIFT', action = act.IncreaseFontSize },
+    { key = '_', mods = 'CTRL|SHIFT', action = act.DecreaseFontSize },
     { key = '0', mods = 'CTRL', action = act.ResetFontSize },
     { key = 'C', mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
     { key = 'N', mods = 'SHIFT|CTRL', action = act.SpawnWindow },
