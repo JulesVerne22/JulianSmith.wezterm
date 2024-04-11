@@ -12,6 +12,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+config.default_prog = { 'pwsh.exe', '-NoLogo' }
 config.font_size = 14
 config.background = {
   {
