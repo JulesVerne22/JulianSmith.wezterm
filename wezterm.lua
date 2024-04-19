@@ -13,6 +13,7 @@ if wezterm.config_builder then
 end
 
 config.enable_wayland = false
+config.audible_bell = "Disabled"
 config.font_size = 14
 config.background = {
   {
