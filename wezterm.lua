@@ -49,7 +49,7 @@ config.keys = {
   { key = 'k',     mods = 'CMD',        action = act.ActivatePaneDirection 'Up' },
   { key = 'Enter', mods = 'CMD',        action = act.ActivateCopyMode },
   { key = 'R',     mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
-  { key = '+',     mods = 'CTRL',       action = act.IncreaseFontSize },
+  { key = '=',     mods = 'CTRL',       action = act.IncreaseFontSize },
   { key = '-',     mods = 'CTRL',       action = act.DecreaseFontSize },
   { key = '0',     mods = 'CTRL',       action = act.ResetFontSize },
   { key = 'C',     mods = 'SHIFT|CTRL', action = act.CopyTo 'Clipboard' },
