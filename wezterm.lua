@@ -47,8 +47,8 @@ config.leader = { key = 'b', mods = 'CMD', timeout_milliseconds = 2000 }
 config.keys = {
   { key = 'l',     mods = 'CMD|SHIFT',  action = act.ActivateTabRelative(1) },
   { key = 'h',     mods = 'CMD|SHIFT',  action = act.ActivateTabRelative(-1) },
-  { key = 'j',     mods = 'CMD',        action = act.ActivatePaneDirection 'Down' },
-  { key = 'k',     mods = 'CMD',        action = act.ActivatePaneDirection 'Up' },
+  { key = 'j',     mods = 'CTRL',        action = act.ActivatePaneDirection 'Down' },
+  { key = 'k',     mods = 'CTRL',        action = act.ActivatePaneDirection 'Up' },
   { key = 'Enter', mods = 'CMD',        action = act.ActivateCopyMode },
   { key = 'R',     mods = 'SHIFT|CTRL', action = act.ReloadConfiguration },
   { key = '=',     mods = 'CTRL',       action = act.IncreaseFontSize },
@@ -64,19 +64,19 @@ config.keys = {
       copy_to = 'ClipboardAndPrimarySelection'
     }
   },
-  { key = 'v',          mods = 'CMD',         action = act.PasteFrom 'Clipboard' },
+  { key = 'V',          mods = 'CTRL|SHIFT',         action = act.PasteFrom 'Clipboard' },
   { key = 'PageUp',     mods = 'CTRL',        action = act.ActivateTabRelative(-1) },
   { key = 'PageDown',   mods = 'CTRL',        action = act.ActivateTabRelative(1) },
   { key = 'LeftArrow',  mods = 'SHIFT|CTRL',  action = act.ActivatePaneDirection 'Left' },
   { key = 'RightArrow', mods = 'SHIFT|CTRL',  action = act.ActivatePaneDirection 'Right' },
   { key = 'UpArrow',    mods = 'SHIFT|CTRL',  action = act.ActivatePaneDirection 'Up' },
   { key = 'DownArrow',  mods = 'SHIFT|CTRL',  action = act.ActivatePaneDirection 'Down' },
-  { key = 'f',          mods = 'CMD',         action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
-  { key = 'd',          mods = 'CMD',         action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-  { key = 'h',          mods = 'CMD',         action = act.ActivatePaneDirection 'Left' },
-  { key = 'l',          mods = 'CMD',         action = act.ActivatePaneDirection 'Right' },
-  { key = 't',          mods = 'CMD',         action = act.SpawnTab 'CurrentPaneDomain' },
-  { key = 'w',          mods = 'CMD',         action = act.CloseCurrentTab { confirm = false } },
+  { key = 'f',          mods = 'CTRL',         action = act.SplitVertical { domain = 'CurrentPaneDomain' } },
+  { key = 'd',          mods = 'CTRL|SHIFT',         action = act.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+  { key = 'h',          mods = 'CTRL',         action = act.ActivatePaneDirection 'Left' },
+  { key = 'l',          mods = 'CTRL',         action = act.ActivatePaneDirection 'Right' },
+  { key = 't',          mods = 'CMD|SHIFT',         action = act.SpawnTab 'CurrentPaneDomain' },
+  { key = 'W',          mods = 'CMD|SHIFT',         action = act.CloseCurrentTab { confirm = false } },
   { key = 'x',          mods = 'CMD',         action = act.CloseCurrentPane { confirm = false } },
   { key = 'b',          mods = 'LEADER|CTRL', action = act.SendString '\x02' },
   { key = 'Enter',      mods = 'LEADER',      action = act.ActivateCopyMode },
@@ -105,7 +105,7 @@ wezterm.on('gui-startup', function()
   local windowHeight = wezterm.gui.screens().main.height
   local windowWidth = wezterm.gui.screens().main.width / 2
   window:gui_window():set_inner_size(windowWidth, windowHeight)
-  window:gui_window():set_position(windowWidth, 0)
+  window:gui_window():set_position(windowWidth, 28)
 end)
 
 -- and finally, return the configuration to wezterm
