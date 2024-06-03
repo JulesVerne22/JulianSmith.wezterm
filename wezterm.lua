@@ -26,7 +26,7 @@ config.background = {
   },
   {
     source = {
-      File = os.getenv('HOME') .. '/.config/wezterm/JulianJLogo_White.png'
+      File = '/opt/wezterm/JulianJLogo_White.png'
     },
     opacity = 0.05,
     height = 'Contain',
