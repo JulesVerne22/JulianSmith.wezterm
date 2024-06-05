@@ -45,6 +45,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.disable_default_key_bindings = true
 config.leader = { key = 'b', mods = 'CMD', timeout_milliseconds = 2000 }
 config.keys = {
+  { key = 'L',     mods = 'CTRL|SHIFT', action = act.ShowDebugOverlay },
   { key = 'l',     mods = 'CMD|SHIFT',  action = act.ActivateTabRelative(1) },
   { key = 'h',     mods = 'CMD|SHIFT',  action = act.ActivateTabRelative(-1) },
   { key = 'j',     mods = 'CTRL',        action = act.ActivatePaneDirection 'Down' },
